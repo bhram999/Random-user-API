@@ -1,0 +1,25 @@
+<div id="user_info">
+<table>
+      <tr>
+      	<td>Name:</td>
+        <td><%= @resp["results"][0]["name"]["title"] + "." + @resp["results"][0]["name"]["first"] + " " + 
+		@resp["results"][0]["name"]["last"]%></td>
+      </tr>
+      <tr>
+      	<td>Gender:</td>
+      	<td><%= @resp["results"][0]["gender"]%></td>
+      </tr>
+      <tr>
+      	<td>Email:</td>
+      	<td><%= @resp["results"][0]["email"]%></td>
+      </tr>
+        <tr>
+      	<td>Phone:</td>
+      	<td><%= @resp["results"][0]["phone"]%></td>
+      </tr>
+        <tr>
+      	<td>Pic:</td>
+      	<td><%= image_tag(@resp["results"][0]["picture"]["thumbnail"]) %></td>
+      </tr>
+</table>
+</div>
